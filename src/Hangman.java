@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.GridLayout;
 import javax.swing.*;
 
 public class Hangman extends JFrame {
@@ -10,6 +11,7 @@ public class Hangman extends JFrame {
 
     private JLabel hangmanImage , categoryLabel , hiddenLabel;
 
+    private JButton[] letterButtons;
 
     
     public Hangman(){
@@ -19,8 +21,10 @@ public class Hangman extends JFrame {
         setLocationRelativeTo(null);
         setLayout(null);
         setResizable(false);
+        getContentPane().setBackground(CommonConstants.BACKGROUND_COLOR);
 
         wordDB = new WordDB();
+        letterButtons = new JButton[26];
         wordChallenge = wordDB.loadChallenge();
 
         addGuiComponents();
@@ -55,9 +59,21 @@ public class Hangman extends JFrame {
             CommonConstants.FRAME_SIZE.width,
             hiddenLabel.getPreferredSize().height
             );
+
+
+            GridLayout gridLayout = new GridLayout(4,7);
+            JPanel buttonPanel = new JPanel();
+            buttonPanel.setBounds(
+                -5,
+                hiddenLabel.getY() + hiddenLabel.getPreferredSize().height,
+                CommonConstants.BUTTON_PANEL_SIZE.width,
+                CommonConstants.BUTTON_PANEL_SIZE.height
+            );
+            buttonPanel.setLayout(gridLayout);
             
             getContentPane().add(categoryLabel);
             getContentPane().add(hangmanImage);
+            getContentPane().add(hiddenLabel);
     }
 
 
