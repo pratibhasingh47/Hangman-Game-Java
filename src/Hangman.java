@@ -1,8 +1,10 @@
 import java.awt.Color;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
-public class Hangman extends JFrame {
+public class Hangman extends JFrame implements ActionListener {
     private int incorrectGuesses;
 
     private String[] wordChallenge;
@@ -53,6 +55,7 @@ public class Hangman extends JFrame {
         
         hiddenLabel = new JLabel(CustomTools.hideWords(wordChallenge[1]));
         hiddenLabel.setForeground(Color.white);
+        hiddenLabel.setHorizontalAlignment(SwingConstants.CENTER);
         hiddenLabel.setBounds(
             0,
             categoryLabel.getY()+categoryLabel.getPreferredSize().height +50,
@@ -70,11 +73,49 @@ public class Hangman extends JFrame {
                 CommonConstants.BUTTON_PANEL_SIZE.height
             );
             buttonPanel.setLayout(gridLayout);
+
+            for(char c = 'A'; c <='Z'; c++){
+                JButton button = new JButton(Character.toString(c));
+                button.setBackground(CommonConstants.PRIMARY_COLOR);
+                button.setForeground(Color.WHITE);
+                button.addActionListener(this);
+
+                int currentIndex = c - 'A';
+
+                letterButtons[currentIndex] = button;
+                buttonPanel.add(letterButtons[currentIndex]);
+            }
+
+            JButton resetButton = new JButton("Reset");
+            resetButton.setForeground(Color.WHITE);
+            resetButton.setBackground(CommonConstants.SECONDARY_COLOR);
+            resetButton.addActionListener(this);
+            buttonPanel.add(resetButton);
+
+            JButton quitButton = new JButton("Quit");
+            quitButton.setForeground(Color.WHITE);
+            quitButton.setBackground(CommonConstants.SECONDARY_COLOR);
+            quitButton.addActionListener(this);
+            buttonPanel.add(quitButton);
+
             
             getContentPane().add(categoryLabel);
             getContentPane().add(hangmanImage);
             getContentPane().add(hiddenLabel);
+            getContentPane().add(buttonPanel);
     }
 
+
+    @Override
+    public void actionPerformed(ActionEvent e){
+        String command = e.getActionCommand();
+        if(command.equals("Reset")){
+            resetGame();
+        }
+    }
+
+    private void resetGame(){
+        
+    }
 
 }
