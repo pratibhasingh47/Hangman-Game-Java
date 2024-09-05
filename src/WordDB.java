@@ -7,43 +7,40 @@ import java.util.HashMap;
 import java.util.Random;
 
 public class WordDB {
-    private HashMap<String , String[]> wordList;
+    private HashMap<String, String[]> wordList;
 
     private ArrayList<String> categories;
-    
-    public WordDB(){
+
+    public WordDB() {
         try {
             wordList = new HashMap<>();
             categories = new ArrayList<>();
 
             String filePath = getClass().getClassLoader().getResource(CommonConstants.DATA_PATH).getPath();
-            if(filePath.contains("%20")){
+            if (filePath.contains("%20")) {
                 filePath = filePath.replaceAll("%20", " ");
             }
             BufferedReader reader = new BufferedReader(new FileReader(filePath));
 
             String line;
-            while((line = reader.readLine()) != null){
+            while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
 
                 String category = parts[0];
                 categories.add(category);
 
-                String value[] = Arrays.copyOfRange(parts, 1 ,parts.length);
-                wordList.put(category,value);
+                String value[] = Arrays.copyOfRange(parts, 1, parts.length);
+                wordList.put(category, value);
 
             }
 
-        } 
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println("Error : " + e);
         }
 
-
     }
 
-
-    public String[] loadChallenge(){
+    public String[] loadChallenge() {
         Random rand = new Random();
 
         String category = categories.get(rand.nextInt(categories.size()));
@@ -52,7 +49,7 @@ public class WordDB {
 
         String word = categoryValues[rand.nextInt(categoryValues.length)];
 
-        return new String[]{category.toUpperCase(), word.toUpperCase()};
+        return new String[] { category.toUpperCase(), word.toUpperCase() };
     }
 
 }
