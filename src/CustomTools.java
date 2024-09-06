@@ -33,20 +33,20 @@ public class CustomTools {
         }
     }
 
-    public static Font createFont(String resource){
+    public static Font createFont(String resource) {
         // get font file path
         String filePath = CustomTools.class.getClassLoader().getResource(resource).getPath();
 
         // check for empty spaces in path (bug)
-        if(filePath.contains("%20")){
+        if (filePath.contains("%20")) {
             filePath = filePath.replaceAll("%20", " ");
         }
 
-        try{
+        try {
             File customFontFile = new File(filePath);
             Font customFont = Font.createFont(Font.TRUETYPE_FONT, customFontFile);
             return customFont;
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println("Error: " + e);
         }
         return null;
