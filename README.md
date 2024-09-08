@@ -9,7 +9,7 @@
 <h2>Technologies Frameworks</h2>
 <ul>
   <li><b>JDK 18+</b> - Java Version</li>
-  <li><b>JTatoo</b> - Look and Feel Theme</li>
+  <li><b>JSwing</b> - Look and Feel Theme</li>
 </ul>
 
 
