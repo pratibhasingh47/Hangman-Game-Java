@@ -19,3 +19,9 @@
 <p align="center">
   <img src="https://github.com/curadProgrammer/Java-Swing-Notepad-Text-Editor/blob/main/notepad-project.gif" alt="Project Demo">
 </p> -->
+
+<!--Screenshots (GIFs/PNGs)-->
+<h2>Screenshots</h2>
+<p align="center">
+  <img src="hangman.gif" alt="Hangman Project Demo">
+</p>
