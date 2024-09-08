@@ -21,7 +21,7 @@
 </p> -->
 
 <!--Screenshots (GIFs/PNGs)-->
-<h2>Screenshots</h2>
+<h2>Quick Demo</h2>
 <p align="center">
   <img src="hangman.gif" alt="Hangman Project Demo">
 </p>
