@@ -13,13 +13,6 @@
 </ul>
 
 
-
-<!--Screenshots (GIFs/PNGs)-->
-<!-- <h2>Screenshots</h2>
-<p align="center">
-  <img src="https://github.com/curadProgrammer/Java-Swing-Notepad-Text-Editor/blob/main/notepad-project.gif" alt="Project Demo">
-</p> -->
-
 <!--Screenshots (GIFs/PNGs)-->
 <h2>Quick Demo</h2>
 <p align="center">
