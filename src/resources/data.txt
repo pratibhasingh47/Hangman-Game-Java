@@ -1,4 +1,4 @@
-animals,Lion,Zebra,Elephant,Bird,Tiger,Panda,Komodo Dragon
-sports,Basketball,Soccer,Football,Badminton,Volleyball,Golf,
-fruits,Banana,Orange,Apple,Strawberry,Mango,Tomato,
-anime, Naruto, One Piece, Dragon Ball Z
+animals,Lion,Zebra,Elephant,Bird,Tiger,Panda,Komodo Dragon,Giraffe,Kangaroo,Leopard,Hippo,Hyena,Monkey,Parrot,Fox,Wolf,Eagle,Shark,Dolphin,Whale,Bear,Rabbit,Otter,Deer,Bat,Frog,Snake
+sports,Basketball,Soccer,Football,Badminton,Volleyball,Golf,Tennis,Baseball,Cricket,Swimming,Boxing,Hockey,Rugby,Table Tennis,Archery,Fencing,Wrestling,Gymnastics,Sailing,Shooting
+fruits,Banana,Orange,Apple,Strawberry,Mango,Tomato,Watermelon,Grapes,Pineapple,Cherry,Peach,Pear,Lemon,Lime,Coconut,Papaya,Blueberry,Raspberry,Blackberry,Kiwi,Pomegranate,Fig,Date,Plum,Apricot
+anime,Naruto,One Piece,Dragon Ball Z,Bleach,Attack on Titan,My Hero Academia,Death Note,Fullmetal Alchemist,Tokyo Ghoul,Hunter x Hunter,Demon Slayer,Sword Art Online,One Punch Man,JoJo's Bizarre Adventure,Neon Genesis Evangelion
